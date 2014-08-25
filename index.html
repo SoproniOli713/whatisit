@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What is It</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" media="all" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" media="(min-width:320px) and (max-width:480px)" type="text/css" href="css/320x480.css">
+        <link rel="stylesheet" media="(max-width:480px) and (orientation:landscape)" type="text/css" href="css/480l.css">
+        <link rel="stylesheet" media="(min-width:568px) and (max-width:568px) and (orientation:landscape)" type="text/css" href="css/568l.css">
+        <link rel="stylesheet" media="(min-width:600px)" type="text/css" href="css/even_odd_pc.css">
+    </head>
+    <body>
+    <div class="board_container">
+        <div class="start-menu">
+            <div class="game-title">
+            </div>
+            <div class="how-to-play">
+                <div class="img-how">
+                    <div class="finish-game d0">
+                        <div class="finish-score">
+                            <p>Score</p>
+                            <p class="divider"></p>
+                            <p></p>
+                        </div>
+                        <div class="finish-acc">
+                            <p>Accuracy</p>
+                            <p class="divider"></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-timer">
+                    3
+                </div>
+            </div>
+            <div class="start-button">
+                START
+            </div>
+        </div>
+        <div class="stats">
+            <div class="score left w38P h42">
+                <p class="score-label">Score :&nbsp</p>
+                <p class="score-value">0</p>
+            </div>
+            <div class="multiplier left w30P h42">
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="timer right w30P h42">
+                <p class="left">Time</p>
+                <p class="right timer-rest">00:00</p>
+            </div>
+        </div>
+        <div class="r3"></div>
+        <div class="game_container">
+            <div class="question-ask">
+                <span class="question">A9</span>
+            </div>
+            <div class="divider"></div>
+            <div class="question-ans">
+                <span class="problem">D9</span>
+            </div>
+        </div>
+        <div class="r3"></div>
+        <div class="controlls">
+            <div class="left ctrl yes">
+                YES
+            </div>
+            <div class="right ctrl no">
+                NO
+            </div>
+        </div>
+        <audio class="sound-pop d0" src="sounds/pop.wav"></audio>
+        <audio class="sound-clock d0" src="sounds/ticktock.wav"></audio>
+    </div>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/requestanimation.js"></script>
+        <script type="text/javascript" src="js/what-is-it.js"></script>
+    </body>
+</html>
