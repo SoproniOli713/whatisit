@@ -1,0 +1,319 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08 14, 14, 4:12:53 PM
+    Author     : Soproni B. Oli
+    Package : Game
+    Name : What is It
+    Project : True or False
+    Email : SoproniOli713@gmail.com
+*/
+
+body {
+    line-height: 1.4;
+    font-family: "Open Sans","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    background: #A97D5D;
+}
+
+.board_container {
+    width: 280px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #A97D5D;
+    box-shadow: 0 0px 14px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+}
+
+.start-menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 290px;
+    height: 366px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: rgb(37,141,200); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(37,141,200,1) 0%, rgba(37,141,200,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(37,141,200,1)), color-stop(100%,rgba(37,141,200,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+
+}
+
+.game-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.start-button {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    background: rgb(169,3,41); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #490001;
+    margin-top: 10px;
+}
+
+.start-button:active {
+    background: rgb(255,103,15); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,103,15,1) 0%, rgba(255,103,15,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,103,15,1)), color-stop(100%,rgba(255,103,15,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff670f', endColorstr='#ff670f',GradientType=0 ); /* IE6-9 */
+
+}
+.how-to-play {
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-how {
+    background: url('../images/whatisit.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.intro-timer {
+    min-height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-size: 86px;
+    padding-top: 24px;
+    font-weight: 500;
+    z-index: -1;
+    color: #CCCCCC;
+}
+
+.game_container {
+    margin-left: auto;
+    margin-right: auto;
+    background: #16222d;
+    box-shadow: 0 0px 14px rgba(0,0,0,0.8);
+    margin-top: 12px;
+}
+
+.score p {
+    color: white;
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 2px;
+    margin-left: 6px;
+}
+
+.multiplier div {
+    float: left;
+    width: 6px;
+    height: 6px;
+    background: #003366;
+    margin-left: 2px;
+    border-radius: 3px;
+    margin-top: 18px;
+}
+
+.multiplier div.active {
+    background: #FFCC00;
+}
+
+.timer p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 12px;
+}
+.timer p.right {
+    margin-right: 4px;
+}
+
+.divider {
+    height: 1px;
+    background: darkgreen;
+}
+
+.game_container div:not(.divider .controls) {
+    height: 120px;
+}
+
+div.question-ask {
+    height: 46px;    
+}
+div.question-ans {
+    min-height: 200px;
+}
+
+.game_container span {
+    color : white;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    
+}
+div.controlls {
+    margin-top: 6px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.stats {
+    background: #16222d;
+    box-shadow: 0 0px 14px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+div.score span {
+    color: white;
+    padding-left: 10px;
+}
+
+
+div.controlls div {
+    min-width: 120px;
+    min-height: 38px;
+    background: #7F5417;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 8px;
+    cursor: pointer;
+    border: 1px solid #7F5417;
+}
+
+div.controlls div:active {
+    background: none;
+    color: white;
+}
+
+div.controlls div.right{
+    margin-right: 10px;
+}
+div.controlls div.left {
+    margin-left: 10px;
+}
+span.ctr_even {
+    margin-left: 10px;
+}
+span.question {
+    font-size: 26px;
+    padding-top: 4px;
+}
+span.problem {
+    font-size: 85px;
+    letter-spacing: 2px;
+    padding-top: 10px;
+}
+
+
+/*
+* GAME FINISH
+*/
+
+.finish-game {
+    width: 250px;
+    background: #16222d;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+
+.finish-acc {
+    margin-top: 40px;
+}
+
+/**
+*   GLOABAL STYLE
+*/
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.r3 {
+    clear: both;
+}
+.w30P {
+    width: 34%;
+}
+.w38P {
+    width: 30%;
+}
+.h100P {
+    height: 100%;
+}
+.h42 {
+    height: 42px;
+}
+
+/**
+animation:
+*/
+
+.anim_left {
+    transition-property : left 1s ease 1s;
+    transition-duration : 1s;
+    left: -320px;
+}
+
+.anim_original {
+    display: none;
+    left: 320px;
+}
+
+.anim_back {
+    -webkit-transition-property : left 1s ease 1s;
+    -webkit-transition-duration : 1s;
+    left: 0px;
+}
+.d2 {
+    display: block;
+}
+.d0 {
+    display: none;
+}
